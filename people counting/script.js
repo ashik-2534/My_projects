@@ -1,4 +1,4 @@
-let countEl = document.getElementById("count-el") // pass in arguments
+let countEl = document.getElementById("count-el")
 
 let count = 0
 
