@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Monthly Statements</title>
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <!--  headeing start -->
+    <h1
+      class="text-2xl md:text-4xl text-indigo-700 font-bold text-center py-6 md:py-12"
+    >
+      Monthly Statements
+    </h1>
+    <!--  headeing end -->
+    <main
+      class="w-full md:w-4/5 mx-auto grid gap-0 md:gap-8 grid-cols-1 md:grid-cols-2"
+    >
+      <!-- banner image start -->
+      <div>
+        <img src="./img/money.jpeg" alt="" class="w-full" />
+      </div>
+      <!-- banner image end -->
+      <div class="text-center bg-slate-100">
+        <!-- first form start -->
+        <form action="" id="incomeAndExpenses">
+          <h4 class="text-xl md:text-2xl py-3 md:py-6 font-bold">Income</h4>
+          <label
+            for="income"
+            class="block w-3/4 md:w-1/2 m-auto flex justify-between relative"
+            relative
+          >
+            Income:
+            <input
+              type="text"
+              id="income"
+              class="px-3 py-1 bg-gray-300 rounded"
+              autocomplete="off"
+            />
+            <span
+              class="text-red-700 absolute -bottom-5 right-0 truncate"
+              id="incomeErr"
+            ></span>
+          </label>
+          <h4 class="text-xl md:text-2xl py-3 md:py-6 font-bold">Expenses</h4>
+          <label
+            for="food"
+            class="block w-3/4 md:w-1/2 m-auto flex justify-between mb-6 relative"
+          >
+            Food:
+            <input
+              type="text"
+              id="food"
+              class="px-3 py-1 bg-gray-300 rounded"
+              autocomplete="off"
+            />
+            <span
+              class="text-red-700 absolute -bottom-5 right-0 truncate"
+              id="foodErr"
+            ></span>
+          </label>
+          <label
+            for="rent"
+            class="block w-3/4 md:w-1/2 m-auto flex justify-between mb-6 relative"
+            relative
+          >
+            Rent:
+            <input
+              type="text"
+              id="rent"
+              class="px-3 py-1 bg-gray-300 rounded"
+              autocomplete="off"
+            />
+            <span
+              class="text-red-700 absolute -bottom-5 right-0 truncate"
+              id="rentErr"
+            ></span>
+          </label>
+          <label
+            for="clothes"
+            class="block w-3/4 md:w-1/2 m-auto flex justify-between mb-6 relative"
+            relative
+          >
+            Clothes:
+            <input
+              type="text"
+              id="clothes"
+              class="px-3 py-1 bg-gray-300 rounded"
+              autocomplete="off"
+            />
+            <span
+              class="text-red-700 absolute -bottom-5 right-0 truncate"
+              id="clothesErr"
+            ></span>
+          </label>
+          <input
+            type="submit"
+            value="Calculate"
+            class="text-white bg-blue-500 px-8 py-3 rounded cursor-pointer hover:bg-blue-700"
+          />
+        </form>
+        <!-- first form end -->
+        <h4 class="text-xl md:text-2xl pt-3 md:pt-6 font-bold">
+          Total Expenses: <span id="totalExpenses"></span>
+        </h4>
+        <h4 class="text-xl md:text-2xl py-3 md:py-6 font-bold">
+          Balance: <span id="balance"></span>
+        </h4>
+        <!-- second form start -->
+        <form action="" id="savingForm">
+          <label for="save" class="inline-block relative">
+            Save:
+            <input
+              type="text"
+              id="save"
+              class="px-3 py-1 bg-gray-300 rounded text-center w-24"
+              autocomplete="off"
+            />
+          </label>
+          <label for="">%</label>
+          <input
+            type="submit"
+            value="Save"
+            class="text-white bg-blue-500 px-8 py-2 rounded cursor-pointer hover:bg-blue-700"
+          />
+        </form>
+        <!-- second form end -->
+        <span class="text-red-700 w-full text-center" id="saveErr"></span>
+        <h4 class="text-xl md:text-2xl pt-3 md:pt-6 font-bold">
+          Saving Amount:
+          <span id="savingAmount" class="text-xs font-thin"></span>
+        </h4>
+        <h4 class="text-xl md:text-2xl py-3 md:py-6 font-bold">
+          Remaining Balance: <span id="remainingBalance"></span>
+        </h4>
+      </div>
+    </main>
+    <script src="./js/script.js"></script>
+  </body>
+</html>
