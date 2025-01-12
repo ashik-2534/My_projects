@@ -9,17 +9,18 @@ A simple React application that demonstrates a dark mode toggle feature.
 - **Simple Grid Layout**: A clean and responsive design that works on any device
 
 ## Getting Started
-
+**Open terminal in command prompt**
 ### Installation
 
-1. **Clone the Repository**: `git clone https://github.com/your-username/your-repo-name.git`
-2. **Navigate to the Project Directory**: `cd homework`
+1. **Clone the Repository**: `git clone https://github.com/ashik-2534/My_projects/tree/main/WORK/10th_React_toggle_darkmode`
+2. **Navigate to the Project Directory**: `cd Darkmode`
 3. **Install Dependencies**: `npm install`
-4. **Start the Development Server**: `npm start`
+4. **Start the Development Server**: `npm run dev`
+5. **Create dist file to deoloy on Netlify**: `npm run build`
 
 ### Usage
 
-1. **Open Your Web Browser**: Navigate to `http://localhost:3000`
+1. **Open Your Web Browser**: Navigate to `http://localhost:5173/`
 2. **Toggle Dark Mode**: Click the "Dark Mode" button to switch between light and dark modes
 
 ## Contributing
