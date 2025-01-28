@@ -1,0 +1,22 @@
+<h1>Library</h1>
+<a href="{% url 'add_book' %}">Add New Book</a>
+<ul>
+    {% for book in books %}
+        <li>
+            <strong>{{ book.title }}</strong> by {{ book.author }}
+            <a href="{% url 'edit_book' book.id %}">Edit</a>
+            <a href="{% url 'delete_book' book.id %}">Delete</a>
+            <ul>
+                {% for review in book.reviews.all %}
+                    <li>{{ review.reviewer_name }} ({{ review.rating }}/5): {{ review.review_text }}</li>
+                {% endfor %}
+            </ul>
+        </li>
+    {% endfor %}
+</ul>
+<form method="get">
+    <input type="text" name="genre" placeholder="Filter by Genre">
+    <input type="number" name="rating" placeholder="Filter by Rating" min="1" max="5">
+    <button type="submit">Filter</button>
+</form>
+
